@@ -10,9 +10,10 @@ public class BinarySearch {
     //If there is no match we return -1
     private static int binarySearch(int[] array, int target) {
         int leftIdx = 0;
-        int rightIdx = array.length - 1;//The middle index is the average between the left and right index sum i.e 0+2/2 = 1
+        int rightIdx = array.length - 1;
 
         while (target <= array[rightIdx] && target >= array[leftIdx] && leftIdx <= rightIdx) {
+            //The middle index is the average between the left and right index sum i.e 0+2/2 = 1
             int middleIdx = (int)Math.round((float)(leftIdx + rightIdx)/2);
             if (array[middleIdx] == target) {
                 return middleIdx;
