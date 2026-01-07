@@ -1,18 +1,20 @@
-package data_structures.graphs.adj_matrix;
+package data_structures.graphs.adj_lists;
 
-public class AdjacencyMatrix {
+public class AdjacencyList {
     /*
-    2d array that stores 1s and 0s to represent edges
-    # of rows = # unique nodes
-    # of columns = # unique nodes
+    Array list of linked lists
+    Each linked list has a unique node at the head
+    All adjacent neighbors to that node are added to that node's linked list
 
-    Runtime complexity to check an edge: O(1)
-    Space complexity: O(v^2)
+    Runtime complexity to check an edge: O(v)
+    Space complexity: O(v + e)
      */
 
     public static void main(String[] args) {
-        Graph graph = new Graph(5);
+        Graph graph = new Graph();
+
         graph.addNode(new Node('A'));
+        graph.addNode(new Node('B'));
         graph.addNode(new Node('C'));
         graph.addNode(new Node('D'));
         graph.addNode(new Node('E'));
